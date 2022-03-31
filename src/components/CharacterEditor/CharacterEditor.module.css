@@ -1,0 +1,91 @@
+.characterEditor {
+   padding-top: 128px;
+   padding-bottom: 64px;
+   position: relative;
+}
+
+.characterEditor::before {
+   content: "";
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 40%;
+   background-color: lightgray;
+}
+
+.maxWidthWrapper {
+   position: relative;
+}
+
+.header {
+   padding-bottom: 64px;
+   max-width: 65%;
+   display: inline-block;
+}
+
+.title {
+   font-size: 2.5rem;
+   font-weight: 600;
+   margin-top: 0;
+   margin-bottom: 16px;
+   letter-spacing: -0.5px;
+}
+
+.description {
+   font-size: 1.25rem;
+   margin: 0;
+}
+
+.characterWrapper {
+   position: fixed;
+   top: 128px;
+   right: 0px;
+   min-height: 500px;
+   width: 35%;
+}
+
+.controlColumn {
+   max-width: 50%;
+   white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+   .characterWrapper {
+      position: fixed;
+      top: 0%;
+      right: 0;
+      bottom: 0%;
+      left: 0;
+      margin: auto;
+      /* max-height: 600px; */
+      width: 50%;
+   }
+
+   .maxWidthWrapper {
+      max-width: 100%;
+      width: 100%;
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      z-index: 1;
+      overflow: auto;
+   }
+
+   .characterEditor {
+      padding-top: unset;
+      padding-bottom: unset;
+      position: relative;
+      height: 100%;
+   }
+
+   .header {
+      display: none;
+   }
+
+   .controlColumn {
+      max-width: unset;
+      display: flex;
+      /* overflow-x: auto; */
+      width: fit-content;
+   }
+}

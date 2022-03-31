@@ -1,0 +1,8 @@
+.buttonRow {
+}
+
+@media (max-width: 600px) {
+   .buttonRow {
+      overflow-x: auto;
+   }
+}
